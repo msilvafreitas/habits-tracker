@@ -27,10 +27,10 @@ export function HabitDay({ amountOfHabits = 0, amountCompleted = 0, date, ...res
                     "rounded-lg border-2 m-1", {
                     ["bg-zinc-900 border-zinc-800"]: amountAccomplishedPercentage === 0,
                     ["bg-emerald-900 border-emerald-700"]: amountAccomplishedPercentage > 0 && amountAccomplishedPercentage < 20,
-                    ["bg-emerald-800 border-emerald-600"]: amountAccomplishedPercentage > 20 && amountAccomplishedPercentage < 40,
-                    ["bg-emerald-700 border-emerald-500"]: amountAccomplishedPercentage > 40 && amountAccomplishedPercentage < 60,
-                    ["bg-emerald-600 border-emerald-500"]: amountAccomplishedPercentage > 60 && amountAccomplishedPercentage < 80,
-                    ["bg-emerald-500 border-emerald-400"]: amountAccomplishedPercentage > 80,
+                    ["bg-emerald-800 border-emerald-600"]: amountAccomplishedPercentage >= 20 && amountAccomplishedPercentage < 40,
+                    ["bg-emerald-700 border-emerald-500"]: amountAccomplishedPercentage >= 40 && amountAccomplishedPercentage < 60,
+                    ["bg-emerald-600 border-emerald-500"]: amountAccomplishedPercentage >= 60 && amountAccomplishedPercentage < 80,
+                    ["bg-emerald-500 border-emerald-400"]: amountAccomplishedPercentage >= 80,
                     ["border-white border-4"]: isCurrentDay,
                 }
                 )}
